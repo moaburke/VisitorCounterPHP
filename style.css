@@ -1,0 +1,97 @@
+/* Reset margin and padding for all elements, and ensure consistent box-sizing */
+* {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+}
+
+/*Define CSS variables (custom properties) for easy color management*/
+:root {
+      --clr-primary: #0e2d45; /* Primary color variable */
+}
+
+/* Body styling */
+body {
+      height: 100vh; /* Full viewport height*/
+      background-color: white; /* Set background color to white */
+      font-family: "Limelight", sans-serif; /* Use Linelight font from Google Fonts */
+      font-size: 40px; /* Set base font size*/
+      color: var(--clr-primary); /* Use the primary color for text*/
+      display: flex; /* Use flexbox layout */
+      justify-content: center; /* Center hotizontally */
+      align-items: center; /* Center vertically */
+}
+
+/* Top and bottom border styling for the page */
+.top_border, .bottom_border {
+      width: 100%; /* Full width of the viewport */
+      height: 5%; /* 5% of the viewport height */
+      position: fixed; /* Fixed position at the top or bottom */
+      background-color: var(--clr-primary); /* Use the primary color */
+}
+
+/* Position the top border at the top of the page */
+.top_border {
+      top: 0;
+}
+
+/* Position the bottom border at the top of the page */
+.bottom_border {
+      bottom: 0;
+}
+
+/* Main wrapper styling */
+.main_wrapper {
+      width: 100%; /* Full width of the viewport */
+      height: 60vh; /* 60% of viewport height */
+      position: relative; /* Allow absolute positioning for children */
+
+      display: flex; /* Flexbox layout */
+      flex-direction: column; /*Stack children vertically */
+      justify-content: space-between; /* Spave children evenly*/
+}
+
+/* Style text displayed */
+.visitor_text {
+      font-weight: 500; /* Set font weight */
+      font-style: normal; /* Set font style */
+      position: relative; /* Relative for child positioning*/
+      text-align: center; /* Center the text horizontally*/
+      text-transform: uppercase; /* Make text uppercase */
+      letter-spacing: 5px; /* Add spacing between letters */
+}
+
+/* Visitor display box styling */
+.visitor_display {
+      width: 70%; /* 70% of the parent width */
+      padding: 20px; /* Add padding around content */
+      position: absolute; /* USe absolute positioning */
+      top: 50%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform:translate(-50%, -50%) ; /* Offset by half width and height to achieve perfect centering */
+      display: flex; /* Flexbox for horizontal alignment of images */
+      justify-content: center; /* Center images horiontally */
+      align-items: center; /* Center images vertically*/
+}
+
+/* Styling for images inside the visitor display */
+.visitor_display img {
+      width: calc((100% - 70px)/7); /*Set each image width to 1/7th of the parent width */
+      margin: 5px; /* Space between images*/
+}
+
+
+/*** Responsive Layout ***/
+/* When the screen is equal to or larger than 1400px */
+@media (min-width: 1400px){
+      body {
+            font-size: 60px; /*Increase base font size to 60px */
+      }
+}
+
+/* When the screen is equal to or smaller than 700px */
+@media (max-width: 700px){
+      body {
+            font-size: 30px; /*Decrease base font size to 30px */
+      }
+}
