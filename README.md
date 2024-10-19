@@ -1,5 +1,7 @@
 # Visitor Counter Project
 
+![visitor_counter.png](visitor_counter.png)
+
 This project is a simple PHP-based visitor counter that increments each time a user visits the page. The visitor count is read from a file, incremented, and displayed using images for each digit. The design is styled with HTML and CSS, and it includes the Google Font "Limelight" for aesthetics.
 
 ## Features
